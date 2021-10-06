@@ -90,7 +90,7 @@ const FeaturesContainer = styled.div`
   }
 
   #features h4 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 24px;
   }

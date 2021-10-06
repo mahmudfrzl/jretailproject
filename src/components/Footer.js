@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from "aos";
@@ -10,11 +10,24 @@ import {FaTwitter,
   FaInstagram
 
 } from "react-icons/fa";
+import axios from "axios";
 
 AOS.init();
 
 
-const Footer  = () => {
+const  Footer =()=> {
+  const {feedbacks,setFeedbacks} = useState([])
+
+
+    useEffect(()=>{
+      axios.post('http://localhost:8080/feedback/send',feedbacks).then((response)=>{
+        console.log(response)
+      })
+    },[])
+
+
+
+
 return (
     <>
 
@@ -53,7 +66,7 @@ return (
                   <ul>
                     <li><a href="#">Ana Səhifə</a></li>
                     <li><a href="#about">Haqqımızda</a></li>
-                    <li><a href="#">Qiymətlərimiz</a></li>
+                    <li><a href="#pricing">Qiymətlərimiz</a></li>
                     <li><a href="#">Niyə biz?</a></li>
                     <li><a href="#">FAQ</a></li>
                   </ul>
@@ -71,10 +84,10 @@ return (
                 </div>
 
                 <div className="social-links">
-                  <a href="#" className="twitter"><FaTwitter/></a>
-                  <a href="#" className="facebook"><FaFacebook/></a>
-                  <a href="#" className="instagram"><FaInstagram /></a>
-                  <a href="#" className="linkedin"><FaLinkedin/></a>
+                  <a href="https://twitter.com/kalemyazilimcom?lang=en" className="twitter"><FaTwitter/></a>
+                  <a href="https://www.facebook.com/kalemyazilimcom/" className="facebook"><FaFacebook/></a>
+                  <a href="https://www.instagram.com/kalemyazilimcom/" className="instagram"><FaInstagram /></a>
+                  <a href="https://tr.linkedin.com/company/kalemyazilimcom" className="linkedin"><FaLinkedin/></a>
                 </div>
 
               </div>
@@ -91,10 +104,25 @@ return (
               <p> Sizinlə əlaqənin yaradılması üçün aşağıdakı formu doldurun. </p>
               
                 <div className="form-group">
-                  <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />
+                  <input type="text" name="firstName" className="form-control" id="name" placeholder="Your Name" required />
                 </div>
                 <div className="form-group mt-3">
-                  <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
+                  <input type="text" name="lastName" className="form-control" id="name" placeholder="Your Surname" required />
+                </div>
+                <div className="form-group mt-3">
+                  <input type="email" className="form-control" name="businessEmail" id="email" placeholder="Your Business Email" required />
+                </div>
+                <div className="form-group mt-3">
+                  <input type="text" className="form-control" name="company" id="company" placeholder="Your Company" required />
+                </div>
+                <div className="form-group mt-3">
+                  <input type="text" className="form-control" name="relationShip" id="company" placeholder="Relationship with us" required />
+                </div>
+                <div className="form-group mt-3">
+                  <input type="tel" name="number" className="form-control" id="phone" placeholder="Your Phone" required />
+                </div>
+                <div className="form-group mt-3">
+                  <input type="text" name="country" className="form-control" id="country" placeholder="Your Country" required />
                 </div>
                 <div className="form-group mt-3">
                   <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" required />
@@ -102,7 +130,7 @@ return (
                 <div className="form-group mt-3">
                   <textarea className="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <div className="text-center"><button type="submit" title="Send Message">Göndər</button></div>
+                <div className="text-center " ><button type="submit" title="Send Message">Göndər</button></div>
             
 
             </div>
@@ -128,6 +156,7 @@ return (
 
     </>
 )
+
 }
 
 export default Footer;
@@ -154,7 +183,7 @@ const FooterContainer = styled.div`
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #413e66;
   font-weight: 400;
   letter-spacing: 3px;
@@ -165,7 +194,7 @@ const FooterContainer = styled.div`
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #535074;
 }
 

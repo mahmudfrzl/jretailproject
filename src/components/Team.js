@@ -199,7 +199,7 @@ a {
   text-align: center;
   font-weight: 700;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family:"Open Sans", sans-serif;
 }
 
 .section-header p {

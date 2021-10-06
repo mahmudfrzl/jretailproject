@@ -67,7 +67,7 @@ const AboutContainer = styled.div`
 
   #about .about-content h2 {
     color: #413e66;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
   }
 

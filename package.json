@@ -43,6 +43,7 @@
     "react-scrollspy-nav": "^1.2.4",
     "react-slick": "^0.28.1",
     "react-touch-carousel": "^0.10.2",
+    "semantic-ui-react": "^2.0.4",
     "simple-react-lightbox": "^3.6.9-0",
     "slick-carousel": "^1.8.1",
     "slick-slider": "^1.8.2",

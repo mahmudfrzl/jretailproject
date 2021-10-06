@@ -61,7 +61,7 @@ const CalltoActionContainer = styled.div`
   text-decoration: none;
 }
   #call-to-action .cta-btn {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 1px;

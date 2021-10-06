@@ -52,10 +52,10 @@ const Navbar = () => {
    
 
       <div className={hamburger ? 'social-links active' : 'social-links'}>
-        <a href="#" className="twitter"><i className="fab fa-twitter"></i></a>
-        <a href="#" className="facebook"><i className="fab fa-linkedin"></i></a>
-        <a href="#" className="linkedin"><i className="fab fa-facebook"></i></a>
-        <a href="#" className="instagram"><i className="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/kalemyazilimcom?lang=en" className="twitter"><i className="fab fa-twitter"></i></a>
+        <a href="https://tr.linkedin.com/company/kalemyazilimcom" className="linkedin"><i className="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/kalemyazilimcom/" className="facebook"><i className="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kalemyazilimcom/" className="instagram"><i className="fab fa-instagram"></i></a>
       </div>
       <div>
         <i className={hamburger ? 'fas fa-times mobile-nav-toggle' : 'fas fa-bars mobile-nav-toggle'} onClick={handleClick}></i>
@@ -142,6 +142,7 @@ const NavContainer = styled.nav`
 
 .navbar li {
   position: relative;
+  
 }
 
 .navbar a, .navbar a:focus {
@@ -149,13 +150,15 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 24px;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+
+  text-transform:none !important;
+  letter-spacing:var(--spacing);
   font-size: 14px;
   font-weight: 600;
   color: #413e66;
   white-space: nowrap;
   transition: 0.3s;
+  font-family:quarca;
 }
 
 .navbar a i, .navbar a:focus i {

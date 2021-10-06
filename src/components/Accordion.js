@@ -46,7 +46,7 @@ padding: 50px;
     color: black;
     text-align: center;
     font-weight: 700;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
   }
   .icon {
     background: #fceef3;

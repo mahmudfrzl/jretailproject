@@ -15,7 +15,7 @@ const Home = () => {
       <div className="row justify-content-center align-self-center" data-aos="fade-up">
         <div className="col-lg-6 intro-info order-lg-first order-last" data-aos="zoom-in" data-aos-delay="100">
           <h2>
-          JRetail ilə biznesiniz <br/>
+          JRetail  ilə biznesiniz <br/>
                <span>daha asan</span>
                </h2>
           <div>
@@ -79,6 +79,7 @@ a {
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
+  text-transform:none !important;
 }
 
 #hero .intro-info h2 span {
@@ -93,7 +94,7 @@ a {
 }
 
 #hero .intro-info .btn-get-started, #hero .intro-info .btn-services {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;

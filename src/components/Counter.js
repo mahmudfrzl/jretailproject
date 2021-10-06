@@ -46,7 +46,7 @@ const CounterContainer = styled.div`
   padding-top: 40px;
 }
  .counters .purecounter {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 48px;
   display: block;
@@ -56,7 +56,7 @@ const CounterContainer = styled.div`
 .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #8a87b6;
 }
