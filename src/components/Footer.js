@@ -10,19 +10,21 @@ import {FaTwitter,
   FaInstagram
 
 } from "react-icons/fa";
-import axios from "axios";
+import ApiCalls from '../services/apiCalls';
+
 
 AOS.init();
 
 
 const  Footer =()=> {
-  const {feedbacks,setFeedbacks} = useState([])
+  const {feedbacks,setFeedbacks} = useState({})
 
 
     useEffect(()=>{
-      axios.post('http://localhost:8080/feedback/send',feedbacks).then((response)=>{
-        console.log(response)
-      })
+      let apiCalls = new ApiCalls();
+        apiCalls.sendFeedback(feedbacks).then((response) => {
+          console.log(response)
+        })
     },[])
 
 
